@@ -1,0 +1,20 @@
+@use 'custom';
+// INPORT COMPONENTS
+@use '../../gnpps/scss/components/animations';
+@use '../../gnpps/scss/components/buttons';
+@use '../../gnpps/scss/components/mixins';
+@use '../../gnpps/scss/components/typography';
+
+
+//IMPORT THE SECTIONS
+@use'../../gnpps/scss/fontawesome.scss';
+@use'../../gnpps/scss/sections/navbar';
+@use'../../gnpps/scss/sections/carousel1';
+@use'../../gnpps/scss/sections/intro-section';
+
+
+@use'../../gnpps/scss/sections/services';
+@use'../../gnpps/scss/sections/workinghours';
+@use'../../gnpps/scss/sections/pricing';
+@use'../../gnpps/scss/sections/faqs';
+@use'../../gnpps/scss/sections/footer';

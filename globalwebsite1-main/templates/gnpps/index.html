@@ -1,0 +1,297 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- animate on scroll -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'gnpps/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'gnpps/css/fontawesome.css' %}">
+    <title>CMRIT PRESS</title>
+    
+  
+    
+  </head>
+  <body class="background">
+    
+    
+    <!-- START THE NAVBAR SECTION -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  
+    <nav class="navbar navbar-expand-lg navbar-light menu shadow fixed-top" style="background-color: #e3f2fd;">
+    
+  <div class="container">
+  
+    <!-- <a class="navbar-brand" href="#"> <img src="../../static/images/globalnepal.png" width="54" 
+    height="50" alt="logo">  -->
+    
+<!-- <span class="short-text " style=" font-weight: bold; color:aqua;">GNPPS</span> -->
+  <span class="full-text"  style=" font-weight: bold; color:aqua;" >CmritPrintingPress</span></a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon j"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#services">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#pricing">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#faq">faq</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#footer">contact</a>
+        </li>
+        
+        
+        
+      </ul>
+      <button type="button" class="rounded-pill btn-rounded">+977 9841292655
+      <span> 
+      <i class="fas fa-phone-alt"></i>
+      </span></button>
+    </div>
+  
+  </div>
+</nav>
+{% comment %} CAROUSEL {% endcomment %}
+
+<div class=" carousel my-sm-2"><div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  
+  
+  
+  <div class=" carousel-inner ">
+  {% for x in pics %}
+
+    <div class="carousel-item {%if forloop.counter0 == 0%} active {% endif %}">
+      <img style=" 
+      
+      object-fit:cover;
+      object-position: center;
+      overflow: hidden;
+      height: 65vh;
+      
+      "src="{{x.image.url}} " class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-caption d-none d-md-block">
+      
+      <p style="opacity: 0.4;">Quick and Quality Printing Service.</p>
+    </div>
+  {% endfor %}
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div></div>
+<!-- START INTO SECTION -->
+
+<section id="home" class="intro-section pt-5">
+  <div class="container">
+    <div class="row align-items-center text-white">
+      <div class="col-md-6 intros "data-aos="slide-right"data-aos-duration="2700">
+        <h1 class="display-2">
+          <span class="display-2--intro">Quality With Quantity Thats What We're Good At.</span>
+          <span class="display-2--description lh-lg">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere quo adipisci delectus inventore consequuntur quisquam!</span>
+        </h1>
+        <button type="button" class="rounded-pill btn-rounded"><a style="text-decoration:none; font-family: 'Poppins', sans-serif; color:black;" href="#footer">Get in Touch</a>
+            <span> 
+            <i class="fas fa-arrow-right"></i>
+            </span></button>
+      </div>
+      <div class="col-md-6 intros">
+        <img src="../../static/images/arts/142.png"class="img-fluid" alt="man packing">
+      </div>
+      </div>
+  </div>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,0L30,21.3C60,43,120,85,180,122.7C240,160,300,192,360,181.3C420,171,480,117,540,117.3C600,117,660,171,720,186.7C780,203,840,181,900,160C960,139,1020,117,1080,90.7C1140,64,1200,32,1260,32C1320,32,1380,64,1410,80L1440,96L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path></svg>
+</section>
+<!-- Services -->
+<section id="services" class="our-services pb-5">
+  <div class="container" >
+    <div class="row text-center">
+      <h1 class="display-3 fw-bold ">Our Services</h1>
+      <div class="heading-line  mb-lg-5 mb-sm-3" ></div>
+    </div>
+  </div>
+<!-- Start content description -->
+
+  <div class="container">
+
+  <div class="row ">
+  {%for y in service%}
+    
+    <div class="col-md-3 col-sm-12 pt-4">
+    <img style=" 
+      
+      object-fit:cover;
+      object-position: center;
+      overflow: hidden;
+      
+      box-shadow: 5px 4px 11px;
+      text-align:center;
+      
+      "src="{{y.picture.url}}" class="d-block w-100  " alt="...">
+    </div>
+    
+    <div class="col-md-3 col-sm-12 border-bottom">
+      <div class="bg-white p-3">
+        <h2 class="fw-bold text-capitalize">{{y.caption}}</h2>
+      </div>
+      <div class="bg-white pt-1 px-3  pb-5 text-start">
+        <div class="fw-light ">{{y.details}}</div>
+      </div>
+    </div>
+  
+  {% endfor %}
+
+  
+</div>
+ 
+</section>
+
+{% comment %} PRICING {% endcomment %}
+<section id="pricing">
+<div class="pricing pt-5 text-center">
+      <h1 class="display-3 fw-bold">Pricing</h1>
+      <div class="heading-line mb-5"></div>
+
+    </div>
+  </div>
+  <h2 class="text-center mb-5">pricing not decided yet..</h2>
+
+</section>
+
+{% comment %} FAQ {% endcomment %}
+<section>
+
+
+
+<div id="faq" class="faqs">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,256L30,240C60,224,120,192,180,202.7C240,213,300,267,360,245.3C420,224,480,128,540,117.3C600,107,660,181,720,218.7C780,256,840,256,900,218.7C960,181,1020,107,1080,90.7C1140,75,1200,117,1260,138.7C1320,160,1380,160,1410,160L1440,160L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path></svg>
+  <div class="faq-heading pt-5 text-white text-center">
+      <h1 class="display-3 fw-bold">FAQ</h1>
+      <p class="lead pt-1">Frequestly asked questions, get to know before hand</p>
+      <div class="heading-line mb-5"></div>
+
+    </div>
+  
+  <div class="container mb-5">
+    <div class=" display-3 ">
+  {% for z in faq %}
+  <div class="accordion" id="accordionExample">
+  <div class="accordion-item shadow mb-3 ">
+    <h2 class="accordion-header" id="heading{{ forloop.counter }}">
+      <button class="accordion-button px-3 py-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ forloop.counter }}" aria-expanded="true" aria-controls="collapse{{ forloop.counter }}">
+        {{z.question}}
+      </button>
+    </h2>
+    <div id="collapse{{ forloop.counter }}" class="accordion-collapse collapse" aria-labelledby="heading{{ forloop.counter }}" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <h6>{{z.answer}}</h6>
+      </div>
+    </div>
+  </div>
+  
+  
+</div>
+    
+
+  {% endfor %}
+
+  </div>
+  </div>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill=" #a5a5a5" fill-opacity="1" d="M0,256L30,240C60,224,120,192,180,202.7C240,213,300,267,360,245.3C420,224,480,128,540,117.3C600,107,660,181,720,218.7C780,256,840,256,900,218.7C960,181,1020,107,1080,90.7C1140,75,1200,117,1260,138.7C1320,160,1380,160,1410,160L1440,160L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path></svg>
+
+</div>
+
+
+</section>
+{% comment %} FOOTER {% endcomment %}
+
+<footer class="footer" id="footer">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.0792308963246!2d77.710951414919!3d12.966781790859084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae130f321b2b95%3A0x74b2c05bbc2aac8d!2sCMR%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1644129894396!5m2!1sen!2sin" style="border:0; width:100%; height:40vh; -webkit-filter:grayscale(60%); -moz-filter:grayscale(60%) 
+  -o-filter:grayscale(60%) allowfullscreen="" loading="lazy"></iframe>
+<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2704.3419876466137!2d85.3221332132816!3d27.70149800086959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x649bcea35813c85f!2sGlobal%20Nepal%20Printing%20Press%20Service%20Pvt.%20Ltd.!5e0!3m2!1sen!2snp!4v1629203035286!5m2!1sen!2snp" style="border:0; width:100%; height:40vh; -webkit-filter:grayscale(60%); -moz-filter:grayscale(60%) 
+-o-filter:grayscale(60%) " allowfullscreen="" loading="lazy"></iframe> -->
+
+
+
+  <div class="container"><div class="row">
+  {% comment %} CONTENT FOR MOBILE NUMBER {% endcomment %}
+    <div class="col-md-4 col-lg-4 contact-box pt-1 d-md-block d-lg-flex d-flex">
+      <div class="contact-box__icon"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone-call"  viewBox="0 0 24 24" stroke-width="1"  fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+  <path d="M15 7a2 2 0 0 1 2 2" />
+  <path d="M15 3a6 6 0 0 1 6 6" />
+</svg></div>
+      <div class="contact-box__info">
+        <a class="a contact-box__info--title">01 4102772</a>
+        <p class="contact-box__info--subtitle">Mon-Fri 9am-6pm</p>
+      </div>
+    </div>
+    {% comment %} CONTENT FOR EMAIL {% endcomment %}
+    <div class="col-md-4 col-lg-4 contact-box pt-1 d-md-block d-lg-flex d-flex">
+      <div class="contact-box__icon"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail"  viewBox="0 0 24 24" stroke-width="1"  fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <rect x="3" y="5" width="18" height="14" rx="2" />
+  <polyline points="3 7 12 13 21 7" />
+</svg></div>
+      <div class="contact-box__info">
+        <a class="a contact-box__info--title">globalnepalpress@gmail.com</a>
+        <p class="contact-box__info--subtitle">online-support</p>
+      </div>
+    </div>
+    {% comment %} CONTENT FOR LOCATION {% endcomment %}
+    <div class="col-md-4 col-lg-4 contact-box pt-1 d-md-block d-lg-flex d-flex">
+      <div class="contact-box__icon"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-2" viewBox="0 0 24 24" stroke-width="1"  fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <line x1="18" y1="6" x2="18" y2="6.01" />
+  <path d="M18 13l-3.5 -5a4 4 0 1 1 7 0l-3.5 5" />
+  <polyline points="10.5 4.75 9 4 3 7 3 20 9 17 15 20 21 17 21 15" />
+  <line x1="9" y1="4" x2="9" y2="17" />
+  <line x1="15" y1="15" x2="15" y2="20" />
+</svg></div>
+      <div class="contact-box__info">
+        <a class="a contact-box__info--title">Anamnagar,Kathmandu</a>
+        <p class="contact-box__info--subtitle">Behind BajeKo Sekuwa</p>
+      </div>
+    </div>
+  </div> </div>
+  {% comment %} SOCIALMEDIA {% endcomment %}
+  <div class="footer-sm" style="background-color:#212121"><div class="container">
+    <div class="row py-4 text-center text-white"><div class="col-lg-5 col-md-6 mb-md-0">Connect with us on social media</div>
+    <div class="col-lg-7 col-md-6">
+    <a href="https://www.facebook.com/profile.php?id=100019514202710" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+
+    </div></div>
+  </div></div>
+</footer>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+@use "../../scss/custom" as *;
+.display-2{
+    margin-bottom:1 rem;
+    text-transform:capitalize;
+    font-family: 'Poppins', sans-serif;
+   
+
+    &--intro {
+        display:inline-block;
+        font-weight:600;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    &--description {
+        font-size:1rem;
+        display:block;
+        text-transform: none;
+        margin-top: 1.2rem;
+        @include media-breakpoint-up(lg){
+            font-size: 1.5rem;
+            display: inline-block;
+        }
+    }
+}
+// heading line
+
+
+.heading-line::before{
+    content: "";
+    width:20rem;
+    height: 0.1rem;
+    display: block;
+    margin: 0 auto;
+    background-color: $primary;
+
+}
+
+.heading-line::after{
+    content: "";
+    padding-top: 0.5rem;
+    width:5rem;
+    height: 0.2rem;
+    display: block;
+    margin:0 auto;
+    margin-bottom: 1rem;
+    background-color: $primary;
+    
+}
+.display-3{
+    font-family: 'Poppins', sans-serif;
+
+} 
+// BORGER RIGHT
+.border-right{
+    border-right:0.1rem solid $gray-300;
+    height:50%;
+
+}
+// DO NoT UNDO COMMENT -Shreeyanch
+
+// .intros{
+//     animation: slide-up 1.4s ease-in;
+//     animation: name duration timing-function delay iteration-count direction fill-mode;
+
+// }
+
+// @keyframes slide-up {
+//     0%{
+//         transform: translateY(20vh);
+//     }
+//     100%{
+//         transform: translateY(0);
+//     }
+    
+// }

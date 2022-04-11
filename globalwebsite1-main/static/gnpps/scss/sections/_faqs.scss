@@ -1,0 +1,7 @@
+@use "../../scss/custom" as *;
+@use"../../scss/components/mixins" as *;
+.faqs{
+    position: relative;
+    padding: 0;
+   @include gradient; 
+}

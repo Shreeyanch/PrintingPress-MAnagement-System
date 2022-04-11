@@ -1,0 +1,14 @@
+@use "../../scss/custom" as *;
+.service-image{
+    img{
+        width:200px;
+        height: 50%;
+        object-fit:cover;
+        object-position: center;
+        overflow: hidden;
+        text-align:center;
+        box-shadow: 5px 10px;
+      
+      
+    }
+}
